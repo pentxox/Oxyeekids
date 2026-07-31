@@ -1,0 +1,1072 @@
+/* ============================================
+   OXYEE LITTLE WEAR
+   Made for Tiny Moments ❤️
+   ============================================ */
+
+:root{
+
+    --primary:#8CCED6;
+    --secondary:#FFB7C5;
+    --accent:#FFE08A;
+    --mint:#B8F2E6;
+    --brown:#7B5D47;
+    --white:#ffffff;
+    --light:#FDFDFD;
+    --text:#444444;
+    --shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    background:#ffffff;
+    overflow-x:hidden;
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+
+}
+
+/* ===============================
+Announcement Bar
+================================ */
+
+.top-bar{
+
+    background:linear-gradient(90deg,#8CCED6,#B8F2E6);
+    color:white;
+    text-align:center;
+    padding:12px;
+    font-size:.9rem;
+    letter-spacing:.5px;
+
+}
+
+/* ===============================
+HEADER
+================================ */
+
+header{
+
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+
+}
+
+.nav-container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+
+}
+
+.logo img{
+
+    width:170px;
+
+}
+
+nav ul{
+
+    display:flex;
+    gap:40px;
+
+}
+
+nav a{
+
+    font-weight:500;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-icons{
+
+    display:flex;
+    gap:20px;
+    font-size:20px;
+
+}
+
+.nav-icons a{
+
+    transition:.3s;
+
+}
+
+.nav-icons a:hover{
+
+    color:var(--secondary);
+
+}
+
+/* ===============================
+Hero
+================================ */
+
+.hero{
+
+    padding:90px 0;
+    background:linear-gradient(135deg,#FDFEFF,#FFF9F9);
+
+}
+
+.hero-content{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:70px;
+
+}
+
+.small-title{
+
+    display:inline-block;
+    background:#EAFBFD;
+    color:#4AA6B4;
+    padding:10px 18px;
+    border-radius:40px;
+    margin-bottom:20px;
+    font-weight:600;
+
+}
+
+.hero h1{
+
+    font-family:'Fredoka',sans-serif;
+    font-size:68px;
+    line-height:1.1;
+    margin-bottom:25px;
+    color:#2E3B4E;
+
+}
+
+.hero h1 span{
+
+    color:var(--secondary);
+
+}
+
+.hero p{
+
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+    color:white;
+    padding:15px 34px;
+    border-radius:50px;
+    transition:.35s;
+    font-weight:600;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+
+}
+
+.btn-secondary{
+
+    border:2px solid var(--primary);
+    color:var(--primary);
+    padding:15px 34px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.35s;
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary);
+    color:white;
+
+}
+
+.hero-image{
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* ===============================
+Section Title
+================================ */
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.section-title span{
+
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+}
+
+.section-title h2{
+
+    font-family:'Fredoka',sans-serif;
+    font-size:46px;
+    margin-top:10px;
+    margin-bottom:15px;
+
+}
+
+.section-title p{
+
+    max-width:650px;
+    margin:auto;
+    color:#777;
+
+}
+
+/* ===============================
+Features
+================================ */
+
+.features{
+
+    padding:100px 0;
+
+}
+
+.feature-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+
+}
+
+.feature-card{
+
+    background:white;
+    border-radius:25px;
+    padding:40px 30px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:var(--shadow);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.feature-card i{
+
+    font-size:45px;
+    color:var(--secondary);
+    margin-bottom:25px;
+
+}
+
+.feature-card h3{
+
+    margin-bottom:15px;
+    font-family:'Fredoka';
+
+}
+
+/* ===============================
+Categories
+================================ */
+
+.categories{
+
+    padding:100px 0;
+    background:#FAFCFD;
+
+}
+
+.category-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+
+}
+
+.category-card{
+
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.4s;
+    cursor:pointer;
+
+}
+
+.category-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.category-card img{
+
+    height:280px;
+    object-fit:cover;
+
+}
+
+.category-card h3{
+
+    text-align:center;
+    padding:25px;
+    font-family:'Fredoka';
+
+}
+
+/* ===============================
+Featured Products
+================================ */
+
+.products{
+
+    padding:100px 0;
+
+}
+
+.product-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+
+}
+
+.product-card{
+
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:var(--shadow);
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.product-card img{
+
+    height:320px;
+    object-fit:cover;
+
+}
+
+.product-info{
+
+    padding:25px;
+
+}
+
+.product-info h3{
+
+    margin-bottom:12px;
+    font-family:'Fredoka';
+
+}
+
+.product-info p{
+
+    margin-bottom:18px;
+    color:#777;
+
+}
+
+.product-info a{
+
+    color:var(--primary);
+    font-weight:600;
+
+}
+
+/* ===================================
+   PRODUCT DETAILS PAGE
+=================================== */
+
+.product-details{
+    max-width:1200px;
+    margin:60px auto;
+    display:flex;
+    gap:50px;
+    align-items:flex-start;
+    padding:0 20px;
+}
+
+.product-image{
+    flex:1;
+}
+
+.product-image img{
+    width:100%;
+    border-radius:15px;
+}
+
+.product-content{
+    flex:1;
+}
+
+.product-content h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.product-content p{
+    margin:10px 0;
+    color:#555;
+}
+
+.product-content ul{
+    margin:20px 0;
+    padding-left:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#25D366;
+    color:white;
+    padding:14px 28px;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.product-details{
+    padding:80px 0;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.product-wrapper{
+    display:flex;
+    gap:60px;
+    align-items:flex-start;
+}
+
+.product-image{
+    flex:1;
+}
+
+.product-image #mainImage{
+    width:100%;
+    border-radius:15px;
+}
+
+.thumbnail-gallery{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.thumbnail-gallery img{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border:2px solid #ddd;
+    cursor:pointer;
+    border-radius:10px;
+}
+
+.product-content{
+    flex:1;
+}
+
+.product-content h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.rating{
+    color:#f4b400;
+    margin-bottom:20px;
+}
+
+.rating span{
+    color:#666;
+    margin-left:10px;
+}
+
+.sizes{
+    display:flex;
+    gap:10px;
+    margin:20px 0;
+}
+
+.sizes button{
+    padding:10px 20px;
+    border:1px solid #ccc;
+    background:#fff;
+    cursor:pointer;
+    border-radius:8px;
+}
+
+.features,
+.care{
+    margin:20px 0;
+    padding-left:20px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    background:#25D366;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+
+/* ============================================
+   MUSLIN COLLECTION
+============================================ */
+
+.muslin-section{
+    padding:120px 0;
+    background:#FFFDF9;
+}
+
+.muslin-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.muslin-card{
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    transition:.4s;
+    cursor:pointer;
+}
+
+.muslin-card:hover{
+    transform:translateY(-12px);
+}
+
+.muslin-card img{
+    height:320px;
+    object-fit:cover;
+}
+
+.muslin-card h3{
+    text-align:center;
+    padding:22px;
+    font-family:'Fredoka',sans-serif;
+    color:var(--brown);
+}
+
+/* ============================================
+   SHOP BY AGE
+============================================ */
+
+.age-section{
+    padding:120px 0;
+    background:#FAFCFD;
+}
+
+.age-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.age-card{
+
+    background:white;
+    border-radius:30px;
+    padding:45px 30px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:var(--shadow);
+
+}
+
+.age-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.age-icon{
+
+    width:90px;
+    height:90px;
+    margin:auto;
+    background:var(--mint);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:42px;
+    margin-bottom:25px;
+
+}
+
+.age-card h3{
+
+    font-family:'Fredoka';
+    margin-bottom:12px;
+
+}
+
+/* ============================================
+   ABOUT SECTION
+============================================ */
+
+.about-home{
+
+    padding:120px 0;
+
+}
+
+.about-wrapper{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+
+}
+
+.about-image img{
+
+    /* border-radius:30px;
+    box-shadow:var(--shadow); */
+     width: 350px;      /* Change to 300px, 320px, or 350px */
+    height: auto;
+    border-radius: 30px;
+    box-shadow: var(--shadow)
+
+}
+
+.about-text span{
+
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
+
+}
+
+.about-text h2{
+
+    font-family:'Fredoka';
+    font-size:48px;
+    margin:20px 0;
+
+}
+
+.about-text p{
+
+    line-height:2;
+    margin-bottom:20px;
+    color:#666;
+
+}
+
+/* ============================================
+   CUSTOMER PROMISE
+============================================ */
+
+.promise{
+
+    padding:120px 0;
+    background:linear-gradient(135deg,#F9FDFF,#FFF7F8);
+
+}
+
+.promise h2{
+
+    text-align:center;
+    font-size:45px;
+    font-family:'Fredoka';
+    margin-bottom:70px;
+
+}
+
+.promise-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+
+}
+
+.promise-grid div{
+
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+    transition:.4s;
+
+}
+
+.promise-grid div:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.promise-grid h3{
+
+    margin-bottom:18px;
+    font-family:'Fredoka';
+
+}
+
+/* ============================================
+   WHATSAPP CTA
+============================================ */
+
+.whatsapp-section{
+
+    padding:120px 0;
+    text-align:center;
+    background:linear-gradient(135deg,#8CCED6,#B8F2E6);
+
+}
+
+.whatsapp-section h2{
+
+    font-size:52px;
+    color:white;
+    font-family:'Fredoka';
+
+}
+
+.whatsapp-section p{
+
+    color:white;
+    max-width:700px;
+    margin:30px auto;
+    line-height:1.8;
+
+}
+
+.whatsapp-buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+}
+
+/* ============================================
+   CONTACT
+============================================ */
+
+.contact-home{
+
+    padding:120px 0;
+
+}
+
+.contact-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+
+}
+
+.contact-grid div{
+
+    background:white;
+    padding:45px;
+    text-align:center;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+    transition:.35s;
+
+}
+
+.contact-grid div:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.contact-grid i{
+
+    font-size:45px;
+    color:var(--primary);
+    margin-bottom:25px;
+
+}
+
+.contact-grid h3{
+
+    font-family:'Fredoka';
+    margin-bottom:18px;
+
+}
+
+.contact-grid p{
+
+    margin-bottom:8px;
+    color:#666;
+
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+
+footer{
+
+    background:#2E3B4E;
+    color:white;
+    padding-top:80px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:60px;
+    padding-bottom:60px;
+
+}
+
+.footer-logo{
+
+    width:180px;
+    margin-bottom:20px;
+
+}
+
+footer h3,
+footer h4{
+
+    font-family:'Fredoka';
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#ddd;
+    line-height:1.9;
+
+}
+
+footer ul li{
+
+    margin-bottom:15px;
+
+}
+
+footer ul li a{
+
+    color:#ddd;
+    transition:.3s;
+
+}
+
+footer ul li a:hover{
+
+    color:white;
+    padding-left:6px;
+
+}
+
+.copyright{
+
+    border-top:1px solid rgba(255,255,255,.1);
+    padding:25px 0;
+    text-align:center;
+    color:#ddd;
+
+}
+
+/* ============================================
+   FLOATING WHATSAPP
+============================================ */
+
+.floating-whatsapp{
+
+    position:fixed;
+    right:30px;
+    bottom:30px;
+
+    width:70px;
+    height:70px;
+
+    background:#25D366;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+
+    z-index:999;
+
+    transition:.3s;
+
+}
+
+.floating-whatsapp:hover{
+
+    transform:scale(1.1);
+
+}
+
+/* ============================================
+   SCROLL TO TOP
+============================================ */
+
+#scrollTop{
+
+    position:fixed;
+
+    bottom:120px;
+    right:35px;
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    display:none;
+
+    box-shadow:var(--shadow);
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+#scrollTop:hover{
+
+    background:var(--secondary);
+
+}
