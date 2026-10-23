@@ -5,142 +5,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night suites - Oxyee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
 </head>
 
-<body>
+<body class="towel-page night-page">
 
-    <section class="product-details">
+    <header class="towel-header">
+        <a class="towel-brand" href="index.html" aria-label="Oxyee Little Wear home">
+            <img src="images/logoo.png" alt="Oxyee Little Wear">
+            <span>Made for Tiny Moments <span aria-hidden="true">♥</span></span>
+        </a>
+        <nav class="towel-nav" aria-label="Main navigation">
+            <a href="shop.html">Shop</a>
+            <a href="collections.html">Collections</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <button type="button" data-store-search-open aria-label="Search products">⌕</button>
+            <a href="wishlist.html" aria-label="Wishlist">♡</a>
+            <button type="button" data-store-menu-open aria-label="Open navigation menu" aria-haspopup="dialog">☰</button>
+        </div>
+    </header>
 
+    <main class="night-product">
         <div class="container">
+            <nav class="towel-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span aria-hidden="true">/</span>
+                <a href="shop.html">Shop</a>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">Baby Night Suit</span>
+            </nav>
 
             <div class="product-wrapper">
 
-                <!-- Product Images -->
                 <div class="product-image">
 
-                    <img id="mainImage"
-                        src="images/product/ni8hf11.jpg"
-                        alt="Muslin Swaddle">
+                    <div class="main-image-frame">
+                        <img id="mainImage"
+                            src="images/Product/oxyeenightsuits2.png"
+                            alt="Printed baby night suit">
+                        <span class="image-badge">Soft nights start here</span>
+                    </div>
 
-                    <div class="thumbnail-gallery">
-
-                        <img src="images/product/ni8fl22.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Towel 1">
-
-                        <img src="images/product/ni8hf33.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Towel 2">
-
-                        <img src="images/product/ni8fl44.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Towel 3">
-
-                        <img src="images/product/ni8hf11.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Towel 4">
+                    <div class="thumbnail-gallery" aria-label="Night suit photos">
+                        <button class="thumbnail-button is-active" type="button" aria-label="View night suit photo 1" aria-pressed="true">
+                            <img src="images/Product/oxyeenightsuits2.png" alt="">
+                        </button>
+                        <button class="thumbnail-button" type="button" aria-label="View night suit photo 2" aria-pressed="false">
+                            <img src="images/Product/oxyeenightsuit1.png" alt="">
+                        </button>
+                        <button class="thumbnail-button" type="button" aria-label="View night suit photo 3" aria-pressed="false">
+                            <img src="images/Product/oxyeenightsuit3.png" alt="">
+                        </button>
+                        <button class="thumbnail-button" type="button" aria-label="View night suit photo 4" aria-pressed="false">
+                            <img src="images/Product/oxyeenightsuit4.png" alt="">
+                        </button>
 
                     </div>
 
                 </div>
 
-                <!-- Product Details -->
                 <div class="product-content">
 
-                    <h1>Night Suites</h1>
+                    <p class="product-eyebrow">OXYEE LITTLE WEAR <span>·</span> SLEEPWEAR</p>
+                    <h1>Baby Night Suit</h1>
 
                     <p class="rating">
-                        ⭐⭐⭐⭐⭐
+                        <span class="rating-stars" aria-label="5 out of 5 stars">★★★★★</span>
                         <span>Premium Baby Wear</span>
                     </p>
 
-                    <h3>Material</h3>
-
-                    <p><strong>🧵 100% Premium Cotton Terry Fabric</strong></p>
-
-                    <p>
-                        Soft, breathable, skin-friendly cotton fabric designed to provide maximum comfort for a peaceful night's sleep.
-                    </p>
-
-                    <h3>Available For</h3>
-
-                    <div class="sizes">
-
-                        <button>0–3 Months</button>
-
-                        <button>3–6 Months</button>
-
-                        <button>6–9 Months</button>
-
-                        <button>9–12 Months</button>
-
+                    <div class="product-divider"></div>
+                    <div class="product-block material-block">
+                        <p class="material-label">MATERIAL</p>
+                        <h2>100% Premium Cotton Terry Fabric</h2>
+                        <p>Soft, breathable, skin-friendly cotton fabric designed to provide maximum comfort for a peaceful night's sleep.</p>
                     </div>
 
-                    <h3>Features</h3>
+                    <div class="product-block">
+                        <h2>Available sizes</h2>
+                        <div class="sizes" role="group" aria-label="Choose baby night suit size">
+                            <button type="button" aria-pressed="false">0–3 <span>Months</span></button>
+                            <button type="button" aria-pressed="false">3–6 <span>Months</span></button>
+                            <button type="button" aria-pressed="false">6–9 <span>Months</span></button>
+                            <button type="button" aria-pressed="false">9–12 <span>Months</span></button>
+                        </div>
+                    </div>
 
-                    <ul class="features">
-
-                        <li>✔ 100% Premium Cotton</li>
-
-                        <li>✔ Soft & Breathable Fabric</li>
-
-                        <li>✔ Gentle on Baby Skin</li>
-
-                        <li>✔ Comfortable Fit</li>
-
-                        <li>✔ Ideal for Night Sleep</li>
-
-                        <li>✔ Easy to Wash & Maintain</li>
-
-                    </ul>
-
-                    <h3>Description</h3>
-
-                    <p>
-                    The Oxyee Baby Night Suit is made from premium cotton fabric that keeps your little one comfortable all night long. 
-                    Its soft, breathable material helps regulate body temperature, making it perfect for peaceful sleep and everyday comfort.
-                    </p>
-
-                    <h3>Wash Care</h3>
-
-                    <ul class="care">
-
-                        <li>🧺 Machine Wash</li>
-
-                        <li>🌤 Dry in Shade</li>
-
-                        <li>🚫 Do Not Bleach</li>
-
-                        <li>🧼 Iron on Low Heat</li>
-
-                    </ul>
-
-                    <h3>Package Includes</h3>
-
-                    <p>Baby Night suits</p>
-
-                    <a href="https://wa.me/918086577921?text=Hi%20I'm%20interested%20in%20the%20Muslin%20Swaddle"
-                        class="btn">
-
-                        💬 Enquire on WhatsApp
-
+                    <a href="https://wa.me/918086577921?text=Hi%2C%20I%27m%20interested%20in%20the%20Oxyee%20Baby%20Night%20Suit"
+                        class="btn" target="_blank" rel="noopener noreferrer">
+                        <span aria-hidden="true">💬</span> Enquire on WhatsApp
                     </a>
+
+                    <div class="product-description">
+                        <h2>Cosy comfort for peaceful nights</h2>
+                        <p>The Oxyee Baby Night Suit is made from premium cotton fabric that keeps your little one comfortable all night long. Its soft, breathable material helps regulate body temperature, making it perfect for peaceful sleep and everyday comfort.</p>
+                    </div>
 
                 </div>
 
             </div>
 
+            <section class="night-details" aria-label="Night suit details">
+                <div class="night-features">
+                    <div class="night-section-heading">
+                        <p class="product-eyebrow">THOUGHTFULLY CHOSEN</p>
+                        <h2>Comfort in every little detail</h2>
+                    </div>
+                    <div class="night-feature-grid">
+                        <article class="night-feature">
+                            <span aria-hidden="true">✳</span>
+                            <h3>Soft &amp; breathable</h3>
+                            <p>Premium cotton that feels light and lovely.</p>
+                        </article>
+                        <article class="night-feature">
+                            <span aria-hidden="true">♡</span>
+                            <h3>Gentle on baby skin</h3>
+                            <p>A comfortable touch for delicate little ones.</p>
+                        </article>
+                        <article class="night-feature">
+                            <span aria-hidden="true">☾</span>
+                            <h3>Made for restful sleep</h3>
+                            <p>Comfy coverage for cosy nights and naps.</p>
+                        </article>
+                        <article class="night-feature">
+                            <span aria-hidden="true">❋</span>
+                            <h3>Easy everyday care</h3>
+                            <p>Simple to wash and ready to wear again.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="night-care">
+                    <div>
+                        <h2>Wash care</h2>
+                        <p>Machine wash · Dry in shade · Do not bleach · Iron on low heat</p>
+                    </div>
+                    <p class="night-package"><span aria-hidden="true">♡</span><span><strong>Package includes</strong><br>Baby Night Suit</span></p>
+                </div>
+            </section>
         </div>
 
-    </section>
+    </main>
+
+    <footer class="towel-footer">
+        <a href="index.html">Oxyee Little Wear</a>
+        <span>Made for Tiny Moments <span aria-hidden="true">♥</span></span>
+    </footer>
 
     <script>
         function changeImage(image) {
-            document.getElementById("mainImage").src = image;
+            const mainImage = document.getElementById("mainImage");
+            mainImage.src = image;
         }
+
+        document.querySelectorAll(".thumbnail-button").forEach((button) => {
+            button.addEventListener("click", () => {
+                changeImage(button.querySelector("img").src);
+                document.querySelectorAll(".thumbnail-button").forEach((thumbnail) => {
+                    const isActive = thumbnail === button;
+                    thumbnail.classList.toggle("is-active", isActive);
+                    thumbnail.setAttribute("aria-pressed", String(isActive));
+                });
+            });
+        });
+
+        document.querySelectorAll(".sizes button").forEach((button) => {
+            button.addEventListener("click", () => {
+                document.querySelectorAll(".sizes button").forEach((size) => {
+                    size.setAttribute("aria-pressed", String(size === button));
+                });
+            });
+        });
     </script>
 
+    <script src="storefront.js"></script>
 </body>
 
 </html>

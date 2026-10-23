@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your saved Oxyee Little Wear babywear favorites.">
+    <title>My Wishlist | Oxyee Little Wear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
+</head>
+<body class="wishlist-page">
+    <div class="top-bar">
+        <div class="container">
+            <p>Premium Cotton Baby Wear <span aria-hidden="true">·</span> Pan India Delivery <span aria-hidden="true">·</span> Made for Tiny Moments</p>
+        </div>
+    </div>
+    <header class="wishlist-header">
+        <a class="wishlist-logo" href="index.html" aria-label="Oxyee Little Wear home">
+            <img src="images/logoo.png" alt="Oxyee Little Wear">
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="shop.html">Shop</a>
+            <a href="collections.html">Collections</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <button type="button" data-store-search-open aria-label="Search products">⌕</button>
+            <a href="wishlist.html" aria-label="Wishlist">♡</a>
+            <button type="button" data-store-menu-open aria-label="Open navigation menu" aria-haspopup="dialog">☰</button>
+        </div>
+    </header>
+    <main class="wishlist-main">
+        <div class="wishlist-container">
+            <nav class="wishlist-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span aria-hidden="true">›</span>
+                <span aria-current="page">Wishlist</span>
+            </nav>
+            <section class="wishlist-heading" aria-labelledby="wishlist-title">
+                <span class="storefront-kicker">YOUR LITTLE FAVORITES</span>
+                <h1 id="wishlist-title">My Wishlist <span aria-hidden="true">♡</span></h1>
+                <p>Keep the pieces you love close at hand.</p>
+            </section>
+            <section class="wishlist-items" data-wishlist-items aria-label="Saved products"></section>
+            <div class="wishlist-empty" data-wishlist-empty hidden>
+                <span aria-hidden="true">♡</span>
+                <h2>Your wishlist is waiting for a little love</h2>
+                <p>Save your favorite babywear here and come back to it anytime.</p>
+                <a class="wishlist-shop-link" href="shop.html">Explore the collection <span aria-hidden="true">→</span></a>
+            </div>
+            <a class="contact-back-home" href="index.html"><span aria-hidden="true">←</span> Back to Home</a>
+        </div>
+    </main>
+    <footer class="contact-footer">
+        <a href="index.html">Oxyee Little Wear</a>
+        <span>Made for Tiny Moments <span aria-hidden="true">♥</span></span>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+    <script src="storefront.js"></script>
+</body>
+</html>

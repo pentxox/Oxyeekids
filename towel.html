@@ -4,141 +4,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Towel - Oxyee</title>
+    <meta name="description" content="Discover the Oxyee Little Wear Baby Towel, made from soft, absorbent premium cotton terry fabric.">
+    <title>Baby Towel | Oxyee Little Wear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
 </head>
 
-<body>
+<body class="towel-page">
+    <header class="towel-header">
+        <a class="towel-brand" href="index.html" aria-label="Oxyee Little Wear home">
+            <img src="images/logoo.png" alt="Oxyee Little Wear">
+            <span>Made for Tiny Moments <span aria-hidden="true">♥</span></span>
+        </a>
+        <nav class="towel-nav" aria-label="Main navigation">
+            <a href="shop.html">Shop</a>
+            <a href="collections.html">Collections</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <button type="button" data-store-search-open aria-label="Search products">⌕</button>
+            <a href="wishlist.html" aria-label="Wishlist">♡</a>
+            <button type="button" data-store-menu-open aria-label="Open navigation menu" aria-haspopup="dialog">☰</button>
+        </div>
+    </header>
 
-    <section class="product-details">
+    <main class="towel-main">
+        <nav class="towel-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="shop.html">Shop</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Baby Towel</span>
+        </nav>
 
-        <div class="container">
-
-            <div class="product-wrapper">
-
-                <!-- Product Images -->
-                <div class="product-image">
-
-                    <img id="mainImage"
-                        src="images/product/tow11.jpg"
-                        alt="Muslin Swaddle">
-
-                    <div class="thumbnail-gallery">
-
-                        <img src="images/product/tow22.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Towel 1">
-
-                        <img src="images/product/tow33.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Towel 2">
-
-                        <img src="images/product/tow44.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Towel 3">
-
-                        <img src="images/product/tow11.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Towel 4">
-
-                    </div>
-
+        <section class="towel-product" aria-labelledby="towel-title">
+            <div class="towel-gallery">
+                <div class="towel-main-image">
+                    <img id="towel-main-image" src="images/Product/oxyeetowel1.png" alt="Hooded baby towel">
+                    <span class="towel-image-note">Made for tiny moments</span>
                 </div>
-
-                <!-- Product Details -->
-                <div class="product-content">
-
-                    <h1>Baby Towel</h1>
-
-                    <p class="rating">
-                        ⭐⭐⭐⭐⭐
-                        <span>Premium Baby Wear</span>
-                    </p>
-
-                    <h3>Material</h3>
-
-                    <p><strong>🧵 100% Premium Cotton Terry Fabric</strong></p>
-
-                    <p>
-                        Ultra-soft, highly absorbent, gentle on delicate baby skin, and perfect after every bath.
-                    </p>
-
-                    <h3>Available For</h3>
-
-                    <div class="sizes">
-
-                        <button>0–3 Months</button>
-
-                        <button>3–6 Months</button>
-
-                        <button>6–9 Months</button>
-
-                    </div>
-
-                    <h3>Features</h3>
-
-                    <ul class="features">
-
-                        <li>✔ Premium Cotton Terry Fabric</li>
-
-                        <li>✔ Ultra Soft & Gentle</li>
-
-                        <li>✔ Lightweight & Quick Dry</li>
-
-                        <li>✔ Gentle on Baby Skin</li>
-
-                        <li>✔ Baby Friendly Material</li>
-
-                        <li>✔ Perfect After Bath</li>
-
-                    </ul>
-
-                    <h3>Description</h3>
-
-                    <p>
-                    The Oxyee Baby Bath Towel is made from premium cotton terry fabric that absorbs water quickly while remaining soft and gentle on your baby's delicate skin. 
-                    Perfect for everyday bath time, it provides warmth, comfort, and quick drying.
-                    </p>
-
-                    <h3>Wash Care</h3>
-
-                    <ul class="care">
-
-                        <li>🧺 Machine Wash</li>
-
-                        <li>🌤 Dry in Shade</li>
-
-                        <li>🚫 Do Not Bleach</li>
-
-                        <li>🧼 Iron on Low Heat</li>
-
-                    </ul>
-
-                    <h3>Package Includes</h3>
-
-                    <p>Baby Towel</p>
-
-                    <a href="https://wa.me/918086577921?text=Hi%20I'm%20interested%20in%20the%20Muslin%20Swaddle"
-                        class="btn">
-
-                        💬 Enquire on WhatsApp
-
-                    </a>
-
+                <div class="towel-thumbnails" role="group" aria-label="Product images">
+                    <button class="towel-thumbnail is-active" type="button" data-image="images/Product/oxyeetowel1.png" data-alt="Hooded baby towel" aria-label="Show Baby Towel image 1" aria-pressed="true">
+                        <img src="images/Product/oxyeetowel1.png" alt="">
+                    </button>
+                    <button class="towel-thumbnail" type="button" data-image="images/Product/oxyeetowel2.png" data-alt="Baby towel featured view" aria-label="Show Baby Towel image 2" aria-pressed="false">
+                        <img src="images/Product/oxyeetowel2.png" alt="">
+                    </button>
+                    <button class="towel-thumbnail" type="button" data-image="images/Product/oxyeetowel3.png" data-alt="Baby towel alternate view" aria-label="Show Baby Towel image 3" aria-pressed="false">
+                        <img src="images/Product/oxyeetowel3.png" alt="">
+                    </button>
+                    <button class="towel-thumbnail" type="button" data-image="images/Product/oxyeetowel4.png" data-alt="Baby towel alternate view" aria-label="Show Baby Towel image 4" aria-pressed="false">
+                        <img src="images/Product/oxyeetowel4.png" alt="">
+                    </button>
                 </div>
-
+                <p class="towel-gallery-caption">A little softness for every day.</p>
             </div>
 
-        </div>
+            <div class="towel-info">
+                <p class="towel-eyebrow">OXYEE LITTLE WEAR · BABY ESSENTIALS</p>
+                <h1 id="towel-title">Baby Towel</h1>
+                <p class="towel-rating">
+                    <span class="towel-stars" aria-hidden="true">★★★★★</span>
+                    <span>Premium Baby Wear</span>
+                </p>
 
-    </section>
+                <div class="towel-divider"></div>
+
+                <section class="towel-material" aria-labelledby="towel-material-title">
+                    <p class="towel-label">MATERIAL</p>
+                    <h2 id="towel-material-title">100% Premium Cotton Terry Fabric</h2>
+                    <p>Ultra-soft, highly absorbent, gentle on delicate baby skin, and perfect after every bath.</p>
+                </section>
+
+                <fieldset class="towel-size-picker">
+                    <legend>Available sizes</legend>
+                    <div class="towel-size-options">
+                        <button type="button" class="towel-size is-selected" data-size="0–3 Months" aria-pressed="true">0–3 Months</button>
+                        <button type="button" class="towel-size" data-size="3–6 Months" aria-pressed="false">3–6 Months</button>
+                        <button type="button" class="towel-size" data-size="6–9 Months" aria-pressed="false">6–9 Months</button>
+                    </div>
+                </fieldset>
+
+                <a class="towel-whatsapp" id="towel-whatsapp" href="https://wa.me/918086577921" target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">◌</span>
+                    <span>Enquire on WhatsApp</span>
+                    <span class="towel-arrow" aria-hidden="true">→</span>
+                </a>
+                <p class="towel-selection-note">Selected size: <strong id="towel-selected-size">0–3 Months</strong></p>
+
+                <div class="towel-description">
+                    <h2>Warm, soft, post-bath cuddles</h2>
+                    <p>The Oxyee Baby Bath Towel is made from premium cotton terry fabric that absorbs water quickly while remaining soft and gentle on your baby's delicate skin. Perfect for everyday bath time, it provides warmth, comfort, and quick drying.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="towel-details" aria-label="Product details">
+            <div class="towel-features">
+                <div class="towel-section-heading">
+                    <p class="towel-eyebrow">THOUGHTFULLY CHOSEN</p>
+                    <h2>Comfort in every little detail</h2>
+                </div>
+                <div class="towel-feature-grid">
+                    <article class="towel-feature">
+                        <span aria-hidden="true">✳</span>
+                        <h3>Soft &amp; gentle</h3>
+                        <p>Premium cotton terry for a lovely soft feel.</p>
+                    </article>
+                    <article class="towel-feature">
+                        <span aria-hidden="true">♡</span>
+                        <h3>Gentle on baby skin</h3>
+                        <p>A comfortable touch for delicate little ones.</p>
+                    </article>
+                    <article class="towel-feature">
+                        <span aria-hidden="true">⌂</span>
+                        <h3>Absorbent comfort</h3>
+                        <p>Made for warmth and comfort after bath time.</p>
+                    </article>
+                    <article class="towel-feature">
+                        <span aria-hidden="true">❋</span>
+                        <h3>Everyday essential</h3>
+                        <p>A cosy companion for little bath routines.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="towel-care">
+                <div>
+                    <h2>Care instructions</h2>
+                    <p>Machine wash · Dry in shade · Do not bleach · Iron on low heat</p>
+                </div>
+                <p class="towel-package"><span aria-hidden="true">♡</span><span><strong>Package includes</strong><br>Baby Towel</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="towel-footer">
+        <a href="index.html">Oxyee Little Wear</a>
+        <span>Made for Tiny Moments <span aria-hidden="true">♥</span></span>
+    </footer>
 
     <script>
-        function changeImage(image) {
-            document.getElementById("mainImage").src = image;
-        }
-    </script>
+        const towelMainImage = document.getElementById("towel-main-image");
+        const towelWhatsApp = document.getElementById("towel-whatsapp");
+        const towelSelectedSize = document.getElementById("towel-selected-size");
+        const towelWhatsAppNumber = "918086577921";
+        let selectedTowelSize = document.querySelector(".towel-size.is-selected").dataset.size;
 
+        function updateTowelWhatsAppLink() {
+            const message = `Hi, I'm interested in the Baby Towel in size ${selectedTowelSize}. Please share the details.`;
+            towelWhatsApp.href = `https://wa.me/${towelWhatsAppNumber}?text=${encodeURIComponent(message)}`;
+        }
+
+        document.querySelectorAll(".towel-thumbnail").forEach((thumbnail) => {
+            thumbnail.addEventListener("click", () => {
+                towelMainImage.src = thumbnail.dataset.image;
+                towelMainImage.alt = thumbnail.dataset.alt;
+                document.querySelectorAll(".towel-thumbnail").forEach((item) => {
+                    const isActive = item === thumbnail;
+                    item.classList.toggle("is-active", isActive);
+                    item.setAttribute("aria-pressed", String(isActive));
+                });
+            });
+        });
+
+        document.querySelectorAll(".towel-size").forEach((button) => {
+            button.addEventListener("click", () => {
+                selectedTowelSize = button.dataset.size;
+                towelSelectedSize.textContent = selectedTowelSize;
+                document.querySelectorAll(".towel-size").forEach((item) => {
+                    const isSelected = item === button;
+                    item.classList.toggle("is-selected", isSelected);
+                    item.setAttribute("aria-pressed", String(isSelected));
+                });
+                updateTowelWhatsAppLink();
+            });
+        });
+
+        updateTowelWhatsAppLink();
+    </script>
+    <script src="storefront.js"></script>
 </body>
 
 </html>

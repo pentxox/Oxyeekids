@@ -4,142 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jable Button - Oxyee</title>
+    <meta name="description" content="Discover the Oxyee Little Wear Jabla Button, made from soft, breathable premium muslin cotton.">
+    <title>Jabla Button | Oxyee Little Wear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
 </head>
 
-<body>
+<body class="jabla-page">
+    <header class="jabla-header">
+        <a class="jabla-brand" href="index.html" aria-label="Oxyee Little Wear home">
+            <img src="images/logoo.png" alt="Oxyee Little Wear">
+            <span>Made for Tiny Moments <span aria-hidden="true">♥</span></span>
+        </a>
+        <nav class="jabla-nav" aria-label="Main navigation">
+            <a href="shop.html">Shop</a>
+            <a href="collections.html">Collections</a>
+            <a href="About.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <button type="button" data-store-search-open aria-label="Search products">⌕</button>
+            <a href="wishlist.html" aria-label="Wishlist">♡</a>
+            <button type="button" data-store-menu-open aria-label="Open navigation menu" aria-haspopup="dialog">☰</button>
+        </div>
+    </header>
 
-    <section class="product-details">
+    <main class="jabla-main">
+        <nav class="jabla-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span aria-hidden="true">/</span>
+            <a href="shop.html">Shop</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Jabla Button</span>
+        </nav>
 
-        <div class="container">
-
-            <div class="product-wrapper">
-
-                <!-- Product Images -->
-                <div class="product-image">
-
-                    <img id="mainImage"
-                        src="images/product/swad11.jpg"
-                        alt="Muslin Swaddle">
-
-                    <div class="thumbnail-gallery">
-
-                        <img src="images/product/swad22.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Swaddle 1">
-
-                        <img src="images/product/swad33.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Swaddle 2">
-
-                        <img src="images/product/swad44.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Swaddle 3">
-
-                        <img src="images/product/swad11.jpg"
-                            onclick="changeImage(this.src)"
-                            alt="Swaddle 4">
-
-                    </div>
-
+        <section class="jabla-product" aria-labelledby="jabla-title">
+            <div class="jabla-gallery">
+                <div class="jabla-main-image">
+                    <img id="jabla-main-image" src="images/Product/oxyeejabla11.png" alt="Printed cotton baby jabla">
+                    <span class="jabla-image-note">Made for tiny moments</span>
                 </div>
-
-                <!-- Product Details -->
-                <div class="product-content">
-
-                    <h>Jable Button</h>
-
-                    <p class="rating">
-                        ⭐⭐⭐⭐⭐
-                        <span>Premium Baby Wear</span>
-                    </p>
-
-                    <h3>Material</h3>
-
-                    <p><strong>🧵 100% Premium Muslin Cotton</strong></p>
-
-                    <p>
-                        Made from soft, breathable premium cotton fabric that is gentle on your baby's delicate skin, ensuring all-day comfort.
-                    </p>
-
-                    <h3>Available For</h3>
-
-                    <div class="sizes">
-
-                        <button>0–3 Months</button>
-
-                        <button>3–6 Months</button>
-
-                        <button>6–9 Months</button>
-
-                        <button>9-12 Months</button>
-
-                    </div>
-
-                    <h3>Features</h3>
-
-                    <ul class="features">
-
-                        <li>✔ 100% Premium Cotton Fabric</li>
-
-                        <li>✔ Soft & Breathable</li>
-
-                        <li>✔ Gentle on Delicate Baby Skin</li>
-
-                        <li>✔ Easy Button Closure</li>
-
-                        <li>✔ Lightweight & Comfortable</li>
-
-                        <li>✔ Ideal for Everyday Wear</li>
-
-                    </ul>
-
-                    <h3>Description</h3>
-
-                    <p>
-                        The Oxyee Baby Jabla is thoughtfully designed to keep your little one comfortable throughout the day. Crafted from 100% premium cotton, it offers exceptional softness, breathability, and a gentle touch for delicate baby skin. Its lightweight design makes it perfect for daily wear, ensuring comfort during every tiny moment.
-                    </p>
-
-                    <h3>Wash Care</h3>
-
-                    <ul class="care">
-
-                        <li>🧺 Machine Wash</li>
-
-                        <li>🌤 Dry in Shade</li>
-
-                        <li>🚫 Do Not Bleach</li>
-
-                        <li>🧼 Iron on Low Heat</li>
-
-                    </ul>
-
-                    <h3>Package Includes</h3>
-
-                    <p>📦 1 × Baby jabla</p>
-
-                    <a href="https://wa.me/918086577921?text=Hi%20I'm%20interested%20in%20the%20Muslin%20Swaddle"
-                        class="btn">
-
-                        💬 Enquire on WhatsApp
-
-                    </a>
-
+                <div class="jabla-thumbnails" role="group" aria-label="Product images">
+                    <button class="jabla-thumbnail is-active" type="button" data-image="images/Product/oxyeejabla11.png" aria-label="Show Jabla Button image 1" aria-pressed="true">
+                        <img src="images/Product/oxyeejabla11.png" alt="">
+                    </button>
+                    <button class="jabla-thumbnail" type="button" data-image="images/Product/oxyeejabla2.png" aria-label="Show Jabla Button image 2" aria-pressed="false">
+                        <img src="images/Product/oxyeejabla2.png" alt="">
+                    </button>
                 </div>
-
+                <p class="jabla-gallery-caption">A little softness for every day.</p>
             </div>
 
-        </div>
+            <div class="jabla-info">
+                <p class="jabla-eyebrow">OXYEE LITTLE WEAR · BABY ESSENTIALS</p>
+                <h1 id="jabla-title">Jabla Button</h1>
+                <p class="jabla-rating">
+                    <span class="jabla-stars" aria-hidden="true">★★★★★</span>
+                    <span>Premium Baby Wear</span>
+                </p>
 
-    </section>
+                <div class="jabla-divider"></div>
+
+                <section class="jabla-material" aria-labelledby="jabla-material-title">
+                    <p class="jabla-label">MATERIAL</p>
+                    <h2 id="jabla-material-title">100% Premium Muslin Cotton</h2>
+                    <p>Made from soft, breathable premium cotton fabric that is gentle on your baby's delicate skin, ensuring all-day comfort.</p>
+                </section>
+
+                <fieldset class="jabla-size-picker">
+                    <legend>Available sizes</legend>
+                    <div class="jabla-size-options">
+                        <button type="button" class="jabla-size is-selected" data-size="0–3 Months" aria-pressed="true">0–3 Months</button>
+                        <button type="button" class="jabla-size" data-size="3–6 Months" aria-pressed="false">3–6 Months</button>
+                        <button type="button" class="jabla-size" data-size="6–9 Months" aria-pressed="false">6–9 Months</button>
+                        <button type="button" class="jabla-size" data-size="9–12 Months" aria-pressed="false">9–12 Months</button>
+                    </div>
+                </fieldset>
+
+                <a class="jabla-whatsapp" id="jabla-whatsapp" href="https://wa.me/918086577921" target="_blank" rel="noopener noreferrer">
+                    <span aria-hidden="true">◌</span>
+                    <span>Enquire on WhatsApp</span>
+                    <span class="jabla-arrow" aria-hidden="true">→</span>
+                </a>
+                <p class="jabla-selection-note">Selected size: <strong id="jabla-selected-size">0–3 Months</strong></p>
+
+                <div class="jabla-description">
+                    <h2>A gentle everyday essential</h2>
+                    <p>The Oxyee Baby Jabla is thoughtfully designed to keep your little one comfortable throughout the day. Its lightweight design makes it perfect for daily wear, ensuring comfort during every tiny moment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="jabla-details" aria-label="Product details">
+            <div class="jabla-features">
+                <div class="jabla-section-heading">
+                    <p class="jabla-eyebrow">THOUGHTFULLY CHOSEN</p>
+                    <h2>Comfort in every little detail</h2>
+                </div>
+                <div class="jabla-feature-grid">
+                    <article class="jabla-feature">
+                        <span aria-hidden="true">✳</span>
+                        <h3>Soft &amp; breathable</h3>
+                        <p>Premium cotton fabric for all-day comfort.</p>
+                    </article>
+                    <article class="jabla-feature">
+                        <span aria-hidden="true">♡</span>
+                        <h3>Gentle on baby skin</h3>
+                        <p>A soft touch for delicate little ones.</p>
+                    </article>
+                    <article class="jabla-feature">
+                        <span aria-hidden="true">⌂</span>
+                        <h3>Comfortable daily wear</h3>
+                        <p>Easy comfort for everyday moments.</p>
+                    </article>
+                    <article class="jabla-feature">
+                        <span aria-hidden="true">❋</span>
+                        <h3>Lightweight material</h3>
+                        <p>Light and lovely for little days.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="jabla-care">
+                <div>
+                    <h2>Care instructions</h2>
+                    <p>Machine wash · Dry in shade · Do not bleach · Iron on low heat</p>
+                </div>
+                <p class="jabla-package"><span aria-hidden="true">♡</span><span><strong>Package includes</strong><br>1 × Baby jabla</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="jabla-footer">
+        <a href="index.html">Oxyee Little Wear</a>
+        <span>Made for Tiny Moments <span aria-hidden="true">♥</span></span>
+    </footer>
 
     <script>
-        function changeImage(image) {
-            document.getElementById("mainImage").src = image;
-        }
-    </script>
+        const mainImage = document.getElementById("jabla-main-image");
+        const whatsappLink = document.getElementById("jabla-whatsapp");
+        const selectedSizeLabel = document.getElementById("jabla-selected-size");
+        const whatsappNumber = "918086577921";
+        let selectedSize = document.querySelector(".jabla-size.is-selected").dataset.size;
 
+        function updateWhatsAppLink() {
+            const message = `Hi, I'm interested in the Jabla Button in size ${selectedSize}. Please share the details.`;
+            whatsappLink.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        }
+
+        document.querySelectorAll(".jabla-thumbnail").forEach((thumbnail) => {
+            thumbnail.addEventListener("click", () => {
+                mainImage.src = thumbnail.dataset.image;
+                document.querySelectorAll(".jabla-thumbnail").forEach((item) => {
+                    const isActive = item === thumbnail;
+                    item.classList.toggle("is-active", isActive);
+                    item.setAttribute("aria-pressed", String(isActive));
+                });
+            });
+        });
+
+        document.querySelectorAll(".jabla-size").forEach((button) => {
+            button.addEventListener("click", () => {
+                selectedSize = button.dataset.size;
+                selectedSizeLabel.textContent = selectedSize;
+                document.querySelectorAll(".jabla-size").forEach((item) => {
+                    const isSelected = item === button;
+                    item.classList.toggle("is-selected", isSelected);
+                    item.setAttribute("aria-pressed", String(isSelected));
+                });
+                updateWhatsAppLink();
+            });
+        });
+
+        updateWhatsAppLink();
+    </script>
+    <script src="storefront.js"></script>
 </body>
 
 </html>
