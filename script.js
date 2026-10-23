@@ -33,30 +33,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const scrollBtn = document.getElementById("scrollTop");
 
-    window.addEventListener("scroll", () => {
+    if (scrollBtn) {
+        window.addEventListener("scroll", () => {
 
-        if (window.scrollY > 500) {
+            if (window.scrollY > 500) {
 
-            scrollBtn.style.display = "flex";
+                scrollBtn.style.display = "flex";
 
-        } else {
+            } else {
 
-            scrollBtn.style.display = "none";
+                scrollBtn.style.display = "none";
 
-        }
-
-    });
-
-    scrollBtn.addEventListener("click", () => {
-
-        window.scrollTo({
-
-            top: 0,
-            behavior: "smooth"
-
+            }
         });
 
-    });
+        scrollBtn.addEventListener("click", () => {
+
+            window.scrollTo({
+
+                top: 0,
+                behavior: "smooth"
+
+            });
+
+        });
+    }
 
     /* ===========================
        Active Navigation
@@ -231,6 +232,173 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     /* ===========================
+       Homepage Product Carousel
+    =========================== */
+
+    const carousel = document.querySelector("[data-home-carousel]");
+
+    if (carousel) {
+        const track = carousel.querySelector(".home-carousel__track");
+        const slides = Array.from(track.querySelectorAll(".home-carousel__slide"));
+        const pagination = document.querySelector(".home-carousel__pagination");
+        const dots = Array.from(pagination.querySelectorAll("[data-carousel-dot]"));
+        const previousButton = carousel.querySelector("[data-carousel-previous]");
+        const nextButton = carousel.querySelector("[data-carousel-next]");
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone = slides[slides.length - 1].cloneNode(true);
+        let position = 1;
+        let isTransitioning = false;
+        let autoSlideTimer;
+        let touchStartX = null;
+
+        [firstClone, lastClone].forEach((clone) => {
+            clone.setAttribute("aria-hidden", "true");
+            clone.inert = true;
+        });
+
+        track.prepend(lastClone);
+        track.append(firstClone);
+
+        function updateCarousel(animate = true) {
+            const shouldAnimate = animate && !reducedMotion.matches;
+            if (!shouldAnimate) {
+                if (position === 0) position = slides.length;
+                if (position === slides.length + 1) position = 1;
+            }
+
+            const activeSlide = (position - 1 + slides.length) % slides.length;
+            isTransitioning = shouldAnimate;
+            track.classList.toggle("is-instant", !shouldAnimate);
+            track.style.transform = `translate3d(-${position * 100}%, 0, 0)`;
+
+            slides.forEach((slide, index) => {
+                const isActive = index === activeSlide;
+                slide.setAttribute("aria-hidden", String(!isActive));
+                slide.inert = !isActive;
+            });
+
+            dots.forEach((dot, index) => {
+                if (index === activeSlide) {
+                    dot.setAttribute("aria-current", "true");
+                } else {
+                    dot.removeAttribute("aria-current");
+                }
+            });
+        }
+
+        function stopAutoSlide() {
+            window.clearInterval(autoSlideTimer);
+            autoSlideTimer = null;
+        }
+
+        function startAutoSlide() {
+            stopAutoSlide();
+            if (!reducedMotion.matches && !document.hidden &&
+                !carousel.matches(":hover") && !carousel.contains(document.activeElement)) {
+                autoSlideTimer = window.setInterval(() => {
+                    position += 1;
+                    updateCarousel();
+                }, 4000);
+            }
+        }
+
+        function moveToSlide(index) {
+            if (isTransitioning) return;
+            if ((position - 1 + slides.length) % slides.length === index) {
+                startAutoSlide();
+                return;
+            }
+            position = index + 1;
+            updateCarousel();
+            startAutoSlide();
+        }
+
+        function moveBy(direction) {
+            if (isTransitioning) return;
+            position += direction;
+            updateCarousel();
+            startAutoSlide();
+        }
+
+        previousButton.addEventListener("click", () => {
+            moveBy(-1);
+        });
+
+        nextButton.addEventListener("click", () => {
+            moveBy(1);
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => moveToSlide(index));
+        });
+
+        track.addEventListener("transitionend", (event) => {
+            if (event.target !== track) return;
+            isTransitioning = false;
+
+            if (position === 0) {
+                position = slides.length;
+                updateCarousel(false);
+            } else if (position === slides.length + 1) {
+                position = 1;
+                updateCarousel(false);
+            }
+        });
+
+        carousel.addEventListener("mouseenter", stopAutoSlide);
+        carousel.addEventListener("mouseleave", startAutoSlide);
+        carousel.addEventListener("focusin", stopAutoSlide);
+        carousel.addEventListener("focusout", (event) => {
+            if (!carousel.contains(event.relatedTarget)) {
+                startAutoSlide();
+            }
+        });
+
+        carousel.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                moveBy(-1);
+            } else if (event.key === "ArrowRight") {
+                event.preventDefault();
+                moveBy(1);
+            }
+        });
+
+        carousel.addEventListener("pointerdown", (event) => {
+            if (event.isPrimary && event.pointerType === "touch") {
+                touchStartX = event.clientX;
+                carousel.setPointerCapture(event.pointerId);
+            }
+        });
+
+        carousel.addEventListener("pointerup", (event) => {
+            if (touchStartX === null) return;
+            const swipeDistance = event.clientX - touchStartX;
+            touchStartX = null;
+
+            if (Math.abs(swipeDistance) < 45) return;
+
+            moveBy(swipeDistance < 0 ? 1 : -1);
+        });
+
+        carousel.addEventListener("pointercancel", () => {
+            touchStartX = null;
+        });
+
+        document.addEventListener("visibilitychange", startAutoSlide);
+
+        if (reducedMotion.addEventListener) {
+            reducedMotion.addEventListener("change", startAutoSlide);
+        } else {
+            reducedMotion.addListener(startAutoSlide);
+        }
+
+        updateCarousel(false);
+        startAutoSlide();
+    }
+
+    /* ===========================
        Hero Typing Effect
     =========================== */
 
@@ -263,24 +431,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-
-/* ===========================================
-   Mobile Navigation
-=========================================== */
-
-const menuButton = document.querySelector(".fa-bars");
-
-const nav = document.querySelector("nav");
-
-if (menuButton) {
-
-    menuButton.addEventListener("click", () => {
-
-        nav.classList.toggle("showMenu");
-
-    });
-
-}
 
 /* ===========================================
    Scroll Progress Bar

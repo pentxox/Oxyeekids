@@ -22,10 +22,11 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png">
 
 </head>
 
-<body>
+<body class="home-page">
 
 <!-- ========================================= -->
 <!-- Announcement Bar -->
@@ -67,15 +68,13 @@
 
 <ul>
 
-<li><a href="#">Home</a></li>
+<li><a href="shop.html">Shop</a></li>
 
-<li><a href="#">Shop</a></li>
+<li><a href="collections.html">Collections</a></li>
 
-<li><a href="#">Collections</a></li>
+<li><a href="About.html">About</a></li>
 
-<li><a href="#">About</a></li>
-
-<li><a href="#">Contact</a></li>
+<li><a href="contact.html">Contact</a></li>
 
 </ul>
 
@@ -83,11 +82,11 @@
 
 <div class="nav-icons">
 
-<a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+<button type="button" data-store-search-open aria-label="Search products"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
 
-<a href="#"><i class="fa-regular fa-heart"></i></a>
+<a href="wishlist.html" aria-label="Wishlist"><i class="fa-regular fa-heart" aria-hidden="true"></i><span class="wishlist-count" data-wishlist-count aria-live="polite">0</span></a>
 
-<a href="#"><i class="fa-solid fa-bars"></i></a>
+<button type="button" data-store-menu-open aria-label="Open navigation menu" aria-haspopup="dialog"><i class="fa-solid fa-bars" aria-hidden="true"></i></button>
 
 </div>
 
@@ -96,65 +95,105 @@
 </header>
 
 <!-- ========================================= -->
-<!-- Hero Section -->
+<!-- Homepage Image Carousel -->
 <!-- ========================================= -->
 
-<section class="hero">
+<section class="home-carousel" aria-label="Featured babywear">
 
-<div class="container hero-content">
+<div class="home-carousel__viewport" data-home-carousel role="region" aria-roledescription="carousel" aria-label="Featured Oxyee Little Wear products" tabindex="0">
 
-<div class="hero-text">
+<div class="home-carousel__track">
 
-<span class="small-title">
+<article class="home-carousel__slide home-carousel__slide--sand" aria-roledescription="slide" aria-label="1 of 6">
+    <div class="home-carousel__copy">
+        <span class="home-carousel__eyebrow">Made for tiny moments</span>
+        <h1>Baby Night Suits</h1>
+        <p>Explore soft babywear made for little days and cosy nights.</p>
+        <a class="home-carousel__link" href="night.html">Explore Night Suits <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-carousel__image">
+        <img src="images/Product/home-night-suits.webp" alt="Baby wearing a printed night suit" fetchpriority="high" width="1200" height="1200">
+    </div>
+</article>
 
-Premium Baby Collection
+<article class="home-carousel__slide home-carousel__slide--sage" aria-roledescription="slide" aria-label="2 of 6">
+    <div class="home-carousel__copy">
+        <span class="home-carousel__eyebrow">Made for tiny moments</span>
+        <h2>Baby Co-ord Sets</h2>
+        <p>Discover a matching look for your little one's everyday moments.</p>
+        <a class="home-carousel__link" href="cordset.html">Explore Co-ord Sets <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-carousel__image">
+        <img src="images/Product/home-coord-set.webp" alt="Baby wearing a printed co-ord set" loading="lazy" width="1200" height="1200">
+    </div>
+</article>
 
-</span>
+<article class="home-carousel__slide home-carousel__slide--rose" aria-roledescription="slide" aria-label="3 of 6">
+    <div class="home-carousel__copy">
+        <span class="home-carousel__eyebrow">Made for tiny moments</span>
+        <h2>Baby Rompers</h2>
+        <p>Find a playful printed romper for your baby's next little adventure.</p>
+        <a class="home-carousel__link" href="rombers.html">Explore Rompers <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-carousel__image">
+        <img src="images/Product/home-rompers.webp" alt="Baby wearing a printed romper" loading="lazy" width="1200" height="1200">
+    </div>
+</article>
 
-<h1>
+<article class="home-carousel__slide home-carousel__slide--blue" aria-roledescription="slide" aria-label="4 of 6">
+    <div class="home-carousel__copy">
+        <span class="home-carousel__eyebrow">Made for tiny moments</span>
+        <h2>Baby Frocks</h2>
+        <p>See cheerful prints chosen for your little one's wardrobe.</p>
+        <a class="home-carousel__link" href="frock.html">Explore Frocks <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-carousel__image">
+        <img src="images/Product/home-frock.webp" alt="Child wearing a printed baby frock" loading="lazy" width="1200" height="1200">
+    </div>
+</article>
 
-Made for <span>Tiny Moments</span>
+<article class="home-carousel__slide home-carousel__slide--pink" aria-roledescription="slide" aria-label="5 of 6">
+    <div class="home-carousel__copy">
+        <span class="home-carousel__eyebrow">Made for tiny moments</span>
+        <h2>Muslin Swaddles</h2>
+        <p>Browse soft swaddles for those precious little moments.</p>
+        <a class="home-carousel__link" href="swaddle.html">Explore Swaddles <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-carousel__image">
+        <img src="images/Product/home-swaddle.webp" alt="Printed muslin swaddle" loading="lazy" width="1200" height="1200">
+    </div>
+</article>
 
-</h1>
-
-<p>
-
-Wrap your little one in softness and love.
-
-Discover our carefully selected premium cotton
-
-baby essentials for newborns to 12 months.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#" class="btn-primary">
-
-Shop Collection
-
-</a>
-
-<a href="https://wa.me/918086577921"
-
-class="btn-secondary">
-
-<i class="fab fa-whatsapp"></i>
-
-Chat With Us
-
-</a>
+<article class="home-carousel__slide home-carousel__slide--sky" aria-roledescription="slide" aria-label="6 of 6">
+    <div class="home-carousel__copy">
+        <span class="home-carousel__eyebrow">Made for tiny moments</span>
+        <h2>Baby Towels</h2>
+        <p>Take a look at everyday essentials for your little one.</p>
+        <a class="home-carousel__link" href="towel.html">Explore Baby Towels <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="home-carousel__image">
+        <img src="images/Product/home-towel.webp" alt="Printed baby towel" loading="lazy" width="1200" height="1200">
+    </div>
+</article>
 
 </div>
 
+<button class="home-carousel__arrow home-carousel__arrow--previous" type="button" data-carousel-previous aria-label="Previous slide">
+    <span aria-hidden="true">‹</span>
+</button>
+<button class="home-carousel__arrow home-carousel__arrow--next" type="button" data-carousel-next aria-label="Next slide">
+    <span aria-hidden="true">›</span>
+</button>
+
 </div>
 
-<div class="hero-image">
-
-<img src="images/Product/Babyoxy.png" alt="Baby">
-
-</div>
-
+<div class="home-carousel__pagination" role="group" aria-label="Choose a slide">
+    <button type="button" data-carousel-dot="0" aria-label="Go to slide 1" aria-current="true"></button>
+    <button type="button" data-carousel-dot="1" aria-label="Go to slide 2"></button>
+    <button type="button" data-carousel-dot="2" aria-label="Go to slide 3"></button>
+    <button type="button" data-carousel-dot="3" aria-label="Go to slide 4"></button>
+    <button type="button" data-carousel-dot="4" aria-label="Go to slide 5"></button>
+    <button type="button" data-carousel-dot="5" aria-label="Go to slide 6"></button>
 </div>
 
 </section>
@@ -241,7 +280,7 @@ Delivering happiness across India.
 <!-- Categories -->
 <!-- ========================================= -->
 
-<section class="categories">
+<section class="categories" id="categories">
 
 <div class="container">
 
@@ -253,69 +292,85 @@ Shop By Category
 
 <div class="category-grid">
 
-<div class="category-card">
+<a class="category-card" href="jabla.html">
 
-<img src="images/Product/Jabla-button (2).jpg" alt="Jabla-button">
+<img src="images/Product/oxyeejabla11.png" alt="Printed baby jabla">
 
 <h3>Jabla</h3>
 
-</div>
+</a>
 
-<div class="category-card">
+<a class="category-card" href="nappy.html">
 
-<img src="images/Product/nappy2.jpg" alt="Nappy">
+<img src="images/Product/oxyeenappy2.png" alt="Soft baby nappy">
 
 <h3>Nappy</h3>
 
-</div>
+</a>
 
-<div class="category-card">
+<a class="category-card" href="swaddle.html">
 
-<img src="images/Product/swaddle2.jpg" alt="Swaddle">
+<img src="images/Product/oxyeeswaddle2.png" alt="Printed muslin swaddle">
 
 <h3>Swaddle</h3>
 
-</div>
+</a>
 
-<div class="category-card">
+<a class="category-card" href="frock.html">
 
-<img src="images/Product/frock2.jpg" alt="Frock">
+<img src="images/Product/oxyeefrock2.png" alt="Baby frock">
 
 <h3>Frock</h3>
 
-</div>
+</a>
 
-<div class="category-card">
+<a class="category-card" href="towel.html">
 
-<img src="images/Product/towel2.jpg" alt="Towels">
+<img src="images/Product/oxyeetowel2.png" alt="Baby towel">
 
 <h3>Towels</h3>
 
-</div>
+</a>
 
-<div class="category-card">
+<a class="category-card" href="night.html">
 
-<img src="images/Product/nightsuit2.jpg" alt="Night suits">
+<img src="images/Product/oxyeenightsuits2.png" alt="Baby night suit">
 
 <h3>Night Suit</h3>
 
-</div> 
+</a> 
    
-<div class="category-card">
+<a class="category-card" href="cordset.html">
 
-<img src="images/Product/coord set(2).jpg" alt="Co-ord Set">
+<img src="images/Product/oxyee_coord_set_2.png" alt="Baby co-ord set">
 
 <h3>Co-ord Set</h3>
 
-</div>
+</a>
 
-<div class="category-card">
+<a class="category-card" href="rombers.html">
 
-<img src="images/Product/wipes2.jpg" alt="Wipes"> 
+<img src="images/Product/oxyeerombers.png" alt="Printed baby romper">
+
+<h3>Rompers</h3>
+
+</a>
+
+<a class="category-card" href="wipes.html">
+
+<img src="images/Product/oxyeewipes2.png" alt="Reusable baby wipes">
 
 <h3> Wipes </h3>
 
-</div>
+</a>
+
+<a class="category-card" href="baby-accessories.html">
+
+<img src="images/oxyeeaccesories/oxyee_sleepingbAG1.png" alt="Baby sleeping bag from the Baby Accessories collection">
+
+<h3>Baby Accessories</h3>
+
+</a>
 
 </div>
 
@@ -326,126 +381,96 @@ Shop By Category
 <!-- Featured Collection -->
 <!-- ========================================= -->
 
-<section class="products">
+<section class="products" id="featured-collection">
+    <div class="container">
+        <div class="section-title">
+            <h2>Featured Collection</h2>
+            <p>Our newest baby essentials crafted with premium cotton.</p>
+        </div>
 
-<div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/Product/oxyeejabla2.png" alt="Printed baby jabla">
+                <div class="product-info">
+                    <h3>Jabla Button</h3>
+                    <p>Soft cotton comfort</p>
+                    <a href="jabla.html" class="view-btn">View Details</a>
+                </div>
+            </div>
 
-<div class="section-title">
+            <div class="product-card">
+                <img src="images/Product/oxyeeswaddle3.png" alt="Printed muslin swaddle">
+                <div class="product-info">
+                    <h3>Muslin Swaddle</h3>
+                    <p>Soft, breathable cotton</p>
+                    <a href="swaddle.html" class="view-btn">View Details</a>
+                </div>
+            </div>
 
-<h2>
+            <div class="product-card">
+                <img src="images/Product/oxyeetowel2.png" alt="Baby towel">
+                <div class="product-info">
+                    <h3>Baby Towel</h3>
+                    <p>Soft cotton terry</p>
+                    <a href="towel.html" class="view-btn">View Details</a>
+                </div>
+            </div>
 
-Featured Collection
+            <div class="product-card">
+                <img src="images/Product/oxyeenightsuits2.png" alt="Baby night suit">
+                <div class="product-info">
+                    <h3>Night Suit</h3>
+                    <p>Cosy sleepwear</p>
+                    <a href="night.html" class="view-btn">View Details</a>
+                </div>
+            </div>
 
-</h2>
+            <div class="product-card">
+                <img src="images/Product/oxyeefrock2.png" alt="Baby frock">
+                <div class="product-info">
+                    <h3>Baby Frock</h3>
+                    <p>Soft everyday comfort</p>
+                    <a href="frock.html" class="view-btn">View Details</a>
+                </div>
+            </div>
 
-<p>
+            <div class="product-card">
+                <img src="images/Product/oxyeenappy4.png" alt="Soft baby nappy">
+                <div class="product-info">
+                    <h3>Baby Nappy</h3>
+                    <p>Soft muslin cotton</p>
+                    <a href="nappy.html" class="view-btn">View Details</a>
+                </div>
+            </div>
 
-Our newest baby essentials crafted with premium cotton.
+            <div class="product-card">
+                <img src="images/Product/oxyeewipes2.png" alt="Reusable printed baby wipes">
+                <div class="product-info">
+                    <h3>Reusable Baby Wipes</h3>
+                    <p>Soft &amp; gentle</p>
+                    <a href="wipes.html" class="view-btn">View Details</a>
+                </div>
+            </div>
 
-</p>
+            <div class="product-card">
+                <img src="images/Product/oxyee_coord_set_2.png" alt="Baby co-ord set">
+                <div class="product-info">
+                    <h3>Baby Co-ord Set</h3>
+                    <p>Matching everyday comfort</p>
+                    <a href="cordset.html" class="view-btn">View Details</a>
+                </div>
+            </div>
 
-</div>
-
-<div class="product-grid">
-
-<div class="product-card">
-
-<img src="images/product/jabla3.jpg" alt="Jabla">
-
-<div class="product-info">
-
-<h3>Jabla Button</h3>
-
-<p>
-
-</p>
-
-<a href="jabla.html" class="view-btn">
-
-View Details
-
-</a>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="images/product/swaddle3 (2).jpg" alt="Swaddle">
-
-<div class="product-info">
-
-<h3>Muslin Swaddle</h3>
-
-<p>
-
-Premium Cotton
-
-</p>
-
-<a href="swaddle.html" class="view-btn">
-
-View Details
-
-</a>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="images/product/towel2.jpg">
-
-<div class="product-info">
-
-<h3>Baby Towel</h3>
-
-<p>
-
-Soft Cotton
-
-</p>
-
-<a href="towel.html" class="view-btn">
-
-View Details
-
-</a>
-
-</div>
-
-</div>
-
-<div class="product-card">
-
-<img src="images/product/ni8suites2.png">
-
-<div class="product-info">
-
-<h3>Night Suit</h3>
-
-<p>
-
-0-12 Months
-
-</p>
-
-<a href="night.html" class="view-btn">
-
-View Details
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+            <div class="product-card">
+                <img src="images/Product/oxyeerombers.png" alt="Printed baby romper">
+                <div class="product-info">
+                    <h3>Baby Rompers</h3>
+                    <p>Soft, playful everyday wear</p>
+                    <a href="rombers.html" class="view-btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
@@ -472,32 +497,32 @@ View Details
         <div class="muslin-grid">
 
             <div class="muslin-card">
-                <img src="images/Product/Bear1.jpg" alt="">
+                <img src="images/Product/Bear1.jpg" alt="Bear print muslin fabric">
                 <h3>Bear</h3>
             </div>
 
             <div class="muslin-card">
-                <img src="images/Product/unicorn1.jpg" alt="">
+                <img src="images/Product/unicorn1.jpg" alt="Unicorn print muslin fabric">
                 <h3>Unicorn</h3>
             </div>
 
             <div class="muslin-card">
-                <img src="images/Product/Elephant1.jpg" alt="">
+                <img src="images/Product/Elephant1.jpg" alt="Elephant print muslin fabric">
                 <h3>Elephant</h3>
             </div>
 
             <div class="muslin-card">
-                <img src="images/Product/Owl1.jpg" alt="">
+                <img src="images/Product/Owl1.jpg" alt="Owl print muslin fabric">
                 <h3>Owl</h3>
             </div>
 
             <div class="muslin-card">
-                <img src="images/Product/Cloud1.jpg" alt="">
+                <img src="images/Product/Cloud1.jpg" alt="Cloud print muslin fabric">
                 <h3>Cloud</h3>
             </div>
 
             <div class="muslin-card">
-                <img src="images/Product/Trainn1.jpg" alt="">
+                <img src="images/Product/Trainn1.jpg" alt="Train print muslin fabric">
                 <h3>Train</h3>
             </div>
 
@@ -625,7 +650,7 @@ Playful Collection
 
 <div class="about-image">
 
-<img src="images/Product/oxyeeabt.png">
+<img src="images/Product/Babyoxy.png" alt="Oxyee babywear collection">
 
 </div>
 
@@ -657,7 +682,7 @@ Whether you're welcoming a newborn or shopping for your growing little one, our 
 
 </p>
 
-<a href="#" class="btn-primary">
+<a href="About.html" class="btn-primary">
 
 Learn More
 
@@ -832,7 +857,7 @@ We're Always Here
 
 <div>
 
-<i class="fa-solid fa-phone"></i>
+<i class="fa-solid fa-phone" aria-hidden="true"></i>
 
 <h3>
 
@@ -856,7 +881,7 @@ Call Us
 
 <div>
 
-<i class="fa-solid fa-envelope"></i>
+<i class="fa-solid fa-envelope" aria-hidden="true"></i>
 
 <h3>
 
@@ -880,7 +905,7 @@ sourceoneind@gmail.com
 
 <div>
 
-<i class="fa-solid fa-location-dot"></i>
+<i class="fa-solid fa-location-dot" aria-hidden="true"></i>
 
 <h3>
 
@@ -939,15 +964,15 @@ Quick Links
 
 <ul>
 
-<li><a href="#">Home</a></li>
+<li><a href="index.html">Home</a></li>
 
-<li><a href="#">Shop</a></li>
+<li><a href="shop.html">Shop</a></li>
 
-<li><a href="#">Collections</a></li>
+<li><a href="collections.html">Collections</a></li>
 
-<li><a href="#">About</a></li>
+<li><a href="About.html">About</a></li>
 
-<li><a href="#">Contact</a></li>
+<li><a href="contact.html">Contact</a></li>
 
 </ul>
 
@@ -1025,6 +1050,7 @@ class="floating-whatsapp">
 
 
 <script src="script.js"></script>
+<script src="storefront.js"></script>
 
 </body>
 
